@@ -111,12 +111,12 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
         vSeeds.push_back(CDNSSeedData("209.250.248.103", "209.250.248.103"));
-        //vSeeds.push_back(CDNSSeedData());
+        vSeeds.push_back(CDNSSeedData("209.250.248.103", "209.250.248.103"));
 
 
         convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
-        //vFixedSeeds.clear();
-        //vSeeds.clear();
+        vFixedSeeds.clear("209.250.248.103", "209.250.248.103");
+        vSeeds.clear("209.250.248.103", "209.250.248.103");
 
         //getHardcodedSeeds(vFixedSeeds);
 
