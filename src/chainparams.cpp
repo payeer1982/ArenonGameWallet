@@ -97,12 +97,10 @@ public:
         printf("%s\n", genesis.GetHash().ToString().c_str());
         printf("%s\n", genesis.BuildMerkleTree().ToString().c_str());
 
-        
-        assert(hashGenesisBlock == uint256("0xf8212623653741173c34d9cecb0e364ac43f01135eefd86157283bbd689a3e11"));
-        assert(genesis.hashMerkleRoot == uint256("0xcf6d29f362cdcf8a792633b7d33895275cb4ad1403b7849e27dfdd95b2fd9177"));
-        
-
        
+        assert(hashGenesisBlock == uint256("0xf8212623653741173c34d9cecb0e364ac43f01135eefd86157283bbd689a3e11"));
+        assert(genesis.hashMerkleRoot == uint256("0xcf6d29f362cdcf8a792633b7d33895275cb4ad1403b7849e27dfdd95b2fd9177"))
+		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,23);
@@ -110,12 +108,13 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-        vSeeds.push_back(CDNSSeedData("0", "85.53.81.75")); 
-        vSeeds.push_back(CDNSSeedData("1", "209.250.248.103"));
+        vSeeds.push_back(CDNSSeedData("0",  "85.214.211.186")); //185.114.226.103
+        vSeeds.push_back(CDNSSeedData("1",  "185.114.226.103"));
 
-        convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
-        vFixedSeeds.clear();
-        vSeeds.clear();
+       
+	convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
+        //vFixedSeeds.clear();
+       //vSeeds.clear();
 
         //getHardcodedSeeds(vFixedSeeds);
 
